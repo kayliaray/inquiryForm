@@ -2,15 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type=text/css href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 <title>Success</title>
 </head>
 
 <body> 
 Thank you for your inquiry. It is currently being processed. You will receive a confirmation email shortly.
-
-<form action='index.html'>
-<button>Back to the assignment list!</button>
-</form> 
 <?php
 
 $name=$_POST["name"];
@@ -23,7 +20,7 @@ $major=$_POST["major"];
 $year=$_POST["year"];
 $sem=$_POST["sem"];
 
-$to="kdubrey@mail.niagara.edu";
+$to="kmdubrey@gmail.com";
 $subject="Niagara University- Inquiry Form";
 $from=$email;
 $message = "Hello $name! 
@@ -34,9 +31,7 @@ $address
 $city,$state 
 $zip
 
-It will contain the available classes for $major majors for the $sem semster.
-
-Go Purple Eagles!"; 
+It will contain the available classes for $major majors for the $sem semster."; 
 mail($to,$subject,$message,$from);
 
 ?>
